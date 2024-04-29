@@ -3,14 +3,8 @@
 
 //intern
 
-var intern_plus=document.getElementById("intern-plus");
-
-intern_plus.addEventListener("click",function(event){
-    var close=document.createElement("i");
-    close.setAttribute("class","fa fa-minus");
-    close.setAttribute("id","intern-minus");
-
-
+function expand_intern(event){
+    var intern_plus=document.getElementById("intern-plus");
     var experience_intern=document.getElementById("experience-intern");
 
     var intern=document.getElementById("intern");
@@ -20,7 +14,9 @@ intern_plus.addEventListener("click",function(event){
 
     var title=document.createElement("div");
     title.setAttribute("class","intern-title");
-    title.innerHTML=`<h1>Software Intern</h1>`;
+    title.setAttribute("id","intern-title");
+    title.innerHTML=`<h1>Software Intern</h1>
+    <i class="fa fa-minus" id="intern-minus" onclick="shrink_intern(event)"></i>`;
 
     var content=document.createElement("div");
     content.setAttribute("class","intern-content");
@@ -44,8 +40,6 @@ intern_plus.addEventListener("click",function(event){
 <li><i class="fa fa-check-square-o"></i>Possess strong analytical and problem-solving skills to effectively troubleshoot issues and optimize performance in UWB-based
         systems.</li>`;
 
-
-        title.append(close);
         content.append(company);
         content.append(duration);
         content.append(ul);
@@ -53,39 +47,34 @@ intern_plus.addEventListener("click",function(event){
         intern.append(title);
         intern.append(content);
         experience_intern.append(intern);
-});
+}
 
+function shrink_intern(event){
+    var intern=document.getElementById("intern");
 
-// var minus=document.getElementById("intern-minus");
+    var intern_title_exist=document.querySelector(".intern-title");
+    intern_title_exist.remove();
 
-// minus.addEventListener("click",function(event){
-//     var title=document.createElement("div");
-//     title.setAttribute("class","intern-title");
-//     // title.innerHTML=`<h1>Software Intern</h1>
-//     // <i class="fa fa-plus" id="intern-plus"></i>`;
+    var title=document.createElement("div");
+    title.setAttribute("class","intern-title");
+    title.setAttribute("id","intern-title");
+    title.innerHTML=`<h1>Software Intern</h1>
+    <i class="fa fa-plus" id="intern-plus" onclick="expand_intern(event)"></i>`;
 
-//     var close=document.createElement("i");
-//     close.setAttribute("class","fa fa-plus");
-//     close.setAttribute("id","intern-plus");
+    intern.append(title);
 
-
-//     title.append(close);
-//     var content=document.getElementById("intern-content");
-//     content.remove();
-// });
+    var internSection = document.getElementById("intern-content");
+    internSection.parentNode.removeChild(internSection);
+}
 
 
 //college
 
-var college_plus=document.getElementById("college-plus");
+function expand_college(event){
 
-college_plus.addEventListener("click",function(event){
+    var college_plus=document.getElementById("college-plus");
 
     var college=document.querySelector(".college");
-
-    var close=document.createElement("i");
-    close.setAttribute("class","fa fa-minus");
-    close.setAttribute("id","intern-minus");
 
     var college_title_exist=document.getElementById("college-title");
     college_title_exist.remove();
@@ -93,7 +82,8 @@ college_plus.addEventListener("click",function(event){
     var college_title=document.createElement("div");
     college_title.setAttribute("class","college-title");
     college_title.setAttribute("id","college-title");
-    college_title.innerHTML=`<h1>M.Tech Software Engineering</h1>`;
+    college_title.innerHTML=`<h1>M.Tech Software Engineering</h1>
+    <i class="fa fa-minus" id="college-minus" onclick="shrink_college(event)"></i>`;
 
     var college_name=document.createElement("div");
     college_name.setAttribute("class","college-name");
@@ -108,26 +98,43 @@ college_plus.addEventListener("click",function(event){
                                 <p class="college-cgpa"><span>CGPA : </span>9.01</p>`;
 
 
-    college_title.append(close);
     college.append(college_title);
     college.append(college_name);
     college.append(college_content);
-});
+}
 
-//school
 
-var secondary_school_plus=document.getElementById("secondary-school-plus");
+function shrink_college(event){
+    var college=document.querySelector(".college");
 
-secondary_school_plus.addEventListener("click",function(event){
+    var college_minus=document.getElementById("college-minus");
+    var college_title_exist=document.getElementById("college-title");
+    college_title_exist.remove();
 
+    var college_title=document.createElement("div");
+    college_title.setAttribute("class","college-title");
+    college_title.setAttribute("id","college-title");
+    college_title.innerHTML=`<h1>M.Tech Software Engineering</h1>
+    <i class="fa fa-plus" id="college-plus" onclick="expand_college(event)"></i>`;
+
+    college.append(college_title);
+
+    var c_name=document.querySelector(".college-name");
+    c_name.remove();
+
+    var c_content=document.querySelector(".college-content");
+    c_content.remove();
+}
+
+//secondary school
+
+function expand_second_school(event){
+
+    var secondary_school_plus=document.getElementById("secondary-school-plus");
     var secondary_school=document.querySelector(".secondary-school");
 
     var secondary_school_title_exist=document.querySelector(".secondary-school-title");
     secondary_school_title_exist.remove();
-
-    var close=document.createElement("i");
-    close.setAttribute("class","fa fa-minus");
-    close.setAttribute("id","secondary-school-minus");
 
     var secondary_school_name=document.createElement("div");
     secondary_school_name.setAttribute("class","secondary-school-name");
@@ -144,28 +151,43 @@ secondary_school_plus.addEventListener("click",function(event){
 
     var secondary_school_title=document.createElement("div");
     secondary_school_title.setAttribute("class","secondary-school-title");
-    secondary_school_title.innerHTML=`<h1>Secondary Education</h1>`;
+    secondary_school_title.innerHTML=`<h1>Secondary Education</h1>
+    <i class="fa fa-minus" id="secondary-school-minus" onclick="shrink_second_school(event)"></i>`;
 
-    secondary_school_title.append(close);
     secondary_school.append(secondary_school_title);
     secondary_school.append(secondary_school_name);
     secondary_school.append(secondary_school_content);
-});
+}
 
+function shrink_second_school(event){
 
+    var secondary_school=document.querySelector(".secondary-school");
 
-var higher_secondary_school_plus=document.getElementById("higher-secondary-school-plus");
+    var secondary_school_title_exist=document.querySelector(".secondary-school-title");
+    secondary_school_title_exist.remove();
 
-higher_secondary_school_plus.addEventListener("click",function(event){
+    var secondary_school_title=document.createElement("div");
+    secondary_school_title.setAttribute("class","secondary-school-title");
+    secondary_school_title.innerHTML=`<h1>Secondary Education</h1>
+    <i class="fa fa-plus" id="secondary-school-plus" onclick="expand_second_school(event)"></i>`;
 
+    secondary_school.append(secondary_school_title);
+
+    var secondary_school_name=document.querySelector(".secondary-school-name");
+    secondary_school_name.remove();
+
+    var secondary_school_content=document.querySelector(".secondary-school-content")
+    secondary_school_content.remove();
+}
+
+//higher secondary school
+
+function expand_high_school(event){
+    var higher_secondary_school_plus=document.getElementById("higher-secondary-school-plus");
     var higher_secondary_school=document.querySelector(".higher-secondary-school");
 
     var higher_secondary_school_title_exist=document.querySelector(".higher-secondary-school-title");
     higher_secondary_school_title_exist.remove();
-
-    var close=document.createElement("i");
-    close.setAttribute("class","fa fa-minus");
-    close.setAttribute("id","higher-secondary-school-minus");
 
     var higher_secondary_school_name=document.createElement("div");
     higher_secondary_school_name.setAttribute("class","higher-secondary-school-name");
@@ -182,10 +204,31 @@ higher_secondary_school_plus.addEventListener("click",function(event){
 
     var higher_secondary_school_title=document.createElement("div");
     higher_secondary_school_title.setAttribute("class","higher-secondary-school-title");
-    higher_secondary_school_title.innerHTML=`<h1>Higher Secondary Education</h1>`;
+    higher_secondary_school_title.innerHTML=`<h1>Higher Secondary Education</h1>
+    <i class="fa fa-minus" id="higher-secondary-school-minus" onclick="shrink_high_school(event)"></i>`;
 
-    higher_secondary_school_title.append(close);
     higher_secondary_school.append(higher_secondary_school_title);
     higher_secondary_school.append(higher_secondary_school_name);
     higher_secondary_school.append(higher_secondary_school_content);
-});
+}
+
+function shrink_high_school(event){
+
+    var higher_secondary_school=document.querySelector(".higher-secondary-school");
+
+    var higher_secondary_school_title_exist=document.querySelector(".higher-secondary-school-title");
+    higher_secondary_school_title_exist.remove();
+
+    var higher_secondary_school_title=document.createElement("div");
+    higher_secondary_school_title.setAttribute("class","higher-secondary-school-title");
+    higher_secondary_school_title.innerHTML=`<h1>Higher Secondary Education</h1>
+    <i class="fa fa-plus" id="higher-secondary-school-plus" onclick="expand_high_school(event)"></i>`;
+
+    higher_secondary_school.append(higher_secondary_school_title);
+
+    var higher_secondary_school_name=document.querySelector(".higher-secondary-school-name");
+    higher_secondary_school_name.remove();
+
+    var higher_secondary_school_content=document.querySelector(".higher-secondary-school-content")
+    higher_secondary_school_content.remove();
+}
