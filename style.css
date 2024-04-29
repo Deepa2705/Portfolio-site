@@ -1,1 +1,446 @@
 
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+:root{
+    --name: #002D5B;
+    --span: #f85f57;
+    --black: #000000;
+    --white: #ffffff;
+    --bg: #f0f0f0;
+    --grey: #4b4b4b;
+    --back: #ECDEDB;
+}
+
+body{
+    background-color: var(--white);
+    font-size: 18px;
+    font-family: 'Poppins', Courier, monospace;
+}
+
+/* Navigation bar*/
+
+nav h1{
+    color: var(--white);
+    display: inline;
+    margin: 20px;
+}
+
+nav span{
+    color: var(--span);
+}
+
+nav{
+    background-color: var(--name);
+    padding: 18px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+nav li{
+    list-style: none;
+    display: inline;
+    padding: 0px 30px;
+    font-size: 18px;
+}
+
+nav ul{
+    display: inline;
+    /* margin-left: 55%; */
+}
+
+nav a:hover{
+    color: var(--span);
+    cursor: pointer;
+}
+
+/* Home Page */
+
+.home{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.home-intro{
+    width: 55%;
+    text-align: justify;
+    font-size: 20px;
+    margin: 60px 100px 20px 0px;
+    color: var(--black);
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
+    border-radius: 20px;
+    padding: 30px;
+    background-color: var(--bg);
+}
+
+.home-image img{
+    border-radius: 50%;
+}
+
+.home-developer{
+    color: var(--span);
+    font-size: 25px;
+    padding-bottom: 30px;
+    font-weight: bold;
+}
+
+.home h1{
+    color: var(--name);
+    font-size: 50px;
+    padding: 20px 0px 20px 0px;
+}
+
+.home-learn{
+    margin-top: 40px;
+    color: var(--span);
+    font-weight: bold;
+}
+
+.home-image-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.home-social{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+    background-color: var(--bg);
+    border-radius: 120px;
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
+}
+
+.home-social img{
+    cursor: pointer;
+    padding: 20px;
+    padding-top: 28px;
+}
+
+/* Experience Page*/
+
+.intern{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--bg);
+    margin: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgb(239, 239, 239,0.1);
+}
+
+.intern-content li{
+    list-style: none;
+    padding: 10px;
+    color: var(--black);
+}
+
+.intern-title h1{
+    color: var(--name);
+    padding: 20px;
+}
+
+.intern-content ul{
+    padding: 20px;
+}
+
+.intern-content li i.fa{
+    padding-right: 8px;
+    color: var(--span);
+    font-size: 20px;
+}
+
+.intern-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.intern-title i.fa{
+    padding-right: 5px;
+    color: var(--span);
+    font-size: 30px;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.intern-duration{
+    margin: 0px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.intern-duration i.fa{
+    font-size: 20px;
+    color: var(--span);
+    padding: 10px;
+}
+
+.intern-company{
+    font-size: 20px;
+    color: var(--span);
+    padding: 20px 30px;
+    font-weight: bold;
+}
+
+.college{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--bg);
+    margin: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgb(239, 239, 239,0.1);
+}
+
+.college h1{
+    color: var(--name);
+    padding: 20px;
+}
+
+.college-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.college-title i.fa{
+    padding-right: 5px;
+    color: var(--span);
+    font-size: 30px;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.college-duration{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.college-duration i.fa{
+    font-size: 20px;
+    color: var(--span);
+    padding: 10px;
+}
+
+.college-name p{
+    font-size: 20px;
+    color: var(--span);
+    padding: 20px 30px;
+    font-weight: bold;
+}
+
+.college-cgpa{
+    font-size: 20px;
+    color: var(--span);
+    padding: 20px 30px;
+    font-weight: bold;
+}
+
+.college-cgpa span{
+    color: var(--black);
+}
+
+/* Higher Secondary School*/
+
+.secondary-school{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--bg);
+    margin: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgb(239, 239, 239,0.1);
+}
+
+.secondary-school h1{
+    color: var(--name);
+    padding: 20px;
+}
+
+.secondary-school-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.secondary-school-title i.fa{
+    padding-right: 5px;
+    color: var(--span);
+    font-size: 30px;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.secondary-school-title i.fa{
+    padding-right: 5px;
+    color: var(--span);
+    font-size: 30px;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.secondary-school-duration{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.secondary-school-duration i.fa{
+    font-size: 20px;
+    color: var(--span);
+    padding: 10px;
+}
+
+.secondary-school-name p{
+    font-size: 20px;
+    color: var(--span);
+    padding: 20px 30px;
+    font-weight: bold;
+}
+
+.secondary-school-percentage{
+    font-size: 20px;
+    color: var(--span);
+    padding: 20px 30px;
+    font-weight: bold;
+}
+
+.secondary-school-percentage span{
+    color: var(--black);
+}
+
+/* Secondary school*/
+.higher-secondary-school{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--bg);
+    margin: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgb(239, 239, 239,0.1);
+}
+
+.higher-secondary-school h1{
+    color: var(--name);
+    padding: 20px;
+}
+
+.higher-secondary-school-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.higher-secondary-school-title i.fa{
+    padding-right: 5px;
+    color: var(--span);
+    font-size: 30px;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.higher-secondary-school-title i.fa{
+    padding-right: 5px;
+    color: var(--span);
+    font-size: 30px;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.higher-secondary-school-duration{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.higher-secondary-school-duration i.fa{
+    font-size: 20px;
+    color: var(--span);
+    padding: 10px;
+}
+
+.higher-secondary-school-name p{
+    font-size: 20px;
+    color: var(--span);
+    padding: 20px 30px;
+    font-weight: bold;
+}
+
+.higher-secondary-school-percentage{
+    font-size: 20px;
+    color: var(--span);
+    padding: 20px 30px;
+    font-weight: bold;
+}
+
+.higher-secondary-school-percentage span{
+    color: var(--black);
+}
+
+/* Contact */
+
+.contact{
+    background-color: var(--bg);
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+    margin: auto;
+}
+
+.contact-me{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    /* opacity: 0.6; */
+}
+
+.contact-me a{
+    color: var(--black);
+    text-decoration: none;
+    padding: 10px;
+}
+
+.contact-me i{
+    color: var(--span);
+    font-size: 30px;
+    padding: 10px;
+}
+
+.contact-me p{
+    padding: 30px;
+}
+
+.contact-links{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.contact-me a:hover{
+    color: var(--span);
+}
