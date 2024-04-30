@@ -140,7 +140,7 @@ nav a:hover{
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--bg);
-    margin: 50px;
+    margin: 55px;
     border-radius: 20px;
     box-shadow: 0 0 20px rgb(239, 239, 239,0.1);
 }
@@ -206,7 +206,7 @@ nav a:hover{
     flex-direction: column;
     justify-content: space-around;
     background-color: var(--bg);
-    margin: 50px;
+    margin: 55px;
     border-radius: 20px;
     box-shadow: 0 0 20px rgb(239, 239, 239,0.1);
 }
@@ -269,7 +269,7 @@ nav a:hover{
     flex-direction: column;
     justify-content: space-around;
     background-color: var(--bg);
-    margin: 50px;
+    margin: 55px;
     border-radius: 20px;
     box-shadow: 0 0 20px rgb(239, 239, 239,0.1);
 }
@@ -339,7 +339,7 @@ nav a:hover{
     flex-direction: column;
     justify-content: space-around;
     background-color: var(--bg);
-    margin: 50px;
+    margin: 55px;
     border-radius: 20px;
     box-shadow: 0 0 20px rgb(239, 239, 239,0.1);
 }
