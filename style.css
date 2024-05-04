@@ -467,10 +467,30 @@ nav a:hover{
     .nav{
         justify-content: space-betweenx;
     }
+
+    .home-intro{
+        width: 50%;
+        text-align: justify;
+        font-size: 16px;
+        margin: 60px 100px 20px 100px;
+        color: var(--black);
+        /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
+        border-radius: 20px;
+        padding: 30px;
+        background-color: var(--bg);
+    }
+
+    .home h1{
+        font-size: 30px;
+    }
+
+    .home-developer{
+        font-size: 20px;
+    }
 }
 
-@media screen and (min-width:1008px) {
-    .remove, .reorder{
+@media screen and (min-width:1007px) {
+    .reorder{
         display: none;
     }
 }
