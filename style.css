@@ -65,6 +65,12 @@ nav a:hover{
     cursor: pointer;
 }
 
+.nav i.fa{
+    padding-right: 8px;
+    color: var(--span);
+    font-size: 22px;
+}
+
 /* Home Page */
 
 .home{
@@ -449,4 +455,21 @@ nav a:hover{
 
 .contact-me a:hover{
     color: var(--span);
+}
+
+/* Responsive */
+@media screen and (max-width:1007px){
+    .nav-bar{
+        display: none;
+    }
+
+    .nav{
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width:1008px) {
+    .remove, .reorder{
+        display: none;
+    }
 }
