@@ -468,16 +468,18 @@ nav a:hover{
         justify-content: space-betweenx;
     }
 
+    .home{
+        display: flex;  
+    }
+
     .home-intro{
         width: 50%;
         text-align: justify;
         font-size: 16px;
         margin: 60px 100px 20px 100px;
         color: var(--black);
-        /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
         border-radius: 20px;
-        padding: 30px;
-        background-color: var(--bg);
+        padding: 40px;
     }
 
     .home h1{
@@ -486,6 +488,32 @@ nav a:hover{
 
     .home-developer{
         font-size: 20px;
+    }
+
+    .home-image img{
+        border-radius: 50%;
+        width: 180px;
+        height:180px;
+    }
+
+    .home-social{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 40px;
+        background-color: var(--bg);
+        border-radius: 120px;
+        /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
+        margin: 20px;
+    }
+
+    .home-social img{
+        cursor: pointer;
+        padding: 12px;
+        padding-top: 18px;
+        width: 20px;
+        height: 20px;
     }
 }
 
