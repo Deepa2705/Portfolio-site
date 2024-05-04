@@ -133,6 +133,7 @@ nav a:hover{
     background-color: var(--bg);
     border-radius: 120px;
     /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
+    margin: 20px;
 }
 
 .home-social img{
@@ -464,7 +465,7 @@ nav a:hover{
     }
 
     .nav{
-        justify-content: space-between;
+        justify-content: space-betweenx;
     }
 }
 
