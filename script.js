@@ -232,3 +232,80 @@ function shrink_high_school(event){
     var higher_secondary_school_content=document.querySelector(".higher-secondary-school-content")
     higher_secondary_school_content.remove();
 }
+
+// Nav-bar
+function expand_reorder(event) {
+    var nav = document.querySelector(".nav");
+    var nav_bar=document.querySelector(".nav-bar");
+    var reorder = document.getElementById("reorder");
+    var closeBtn = document.createElement("i");
+    closeBtn.classList.add("fa", "fa-remove", "close-btn");
+    closeBtn.onclick = function() {
+        var nav_bar = document.querySelectorAll(".nav-bar li");
+        nav_bar.forEach(function(item) {
+        item.style.display = 'block';
+    });
+        nav.style.display = "flex";
+        reorder.style.display = "inline";
+        closeBtn.style.display = "none";
+    };
+
+    if (nav.style.display === "none" || nav.style.display === "") {
+        nav.style.display = "flex";
+        nav.style.flexDirection = "column";
+        nav.style.alignItems = "center";
+        nav.style.justifyContent = "space-between";
+        reorder.style.display = "none";
+        nav.appendChild(closeBtn);
+    } else {
+        nav.style.display = "none";
+        reorder.style.display = "inline";
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    var screenWidth = window.innerWidth;
+    var reorderButton = document.querySelector(".reorder");
+    var closeButton = document.querySelector(".close");
+
+    if (screenWidth >= 1007) {
+        reorderButton.style.display = "none";
+        closeButton.style.display = "none";
+    } else {
+        reorderButton.style.display = "inline";
+        closeButton.style.display = "none";
+    }
+});
+
+window.addEventListener('resize', function() {
+    var screenWidth = window.innerWidth;
+    var reorderButton = document.querySelector(".reorder");
+    var closeButton = document.querySelector(".close");
+
+    if (screenWidth >= 1007) {
+        reorderButton.style.display = "none";
+        closeButton.style.display = "none";
+    } else {
+        reorderButton.style.display = "inline";
+        closeButton.style.display = "none"; // assuming closeButton is initially hidden
+    }
+});
+
+/*
+function expand_reorder(event){
+    var nav=document.querySelector(".nav");
+    var reorder=document.getElementById("reorder");
+    nav.style.display="flex";
+    nav.style.flexDirection="column";
+    nav.style.alignItems="center";
+    nav.style.justifyContent="space-between";
+
+    var nav_bar=document.querySelectorAll(".nav-bar li");
+    // nav_bar.style.display="block";
+    nav_bar.forEach(function(item) {
+        item.style.display = 'block';
+    });
+
+    reorder.style.display="none";
+}
+*/

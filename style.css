@@ -68,7 +68,7 @@ nav a:hover{
 .nav i.fa{
     padding-right: 8px;
     color: var(--span);
-    font-size: 22px;
+    font-size: 22px;cursor: pointer;
 }
 
 /* Home Page */
@@ -515,10 +515,13 @@ nav a:hover{
         width: 20px;
         height: 20px;
     }
-}
-
-@media screen and (min-width:1007px) {
-    .reorder{
+    .close{
         display: none;
     }
 }
+/*
+@media screen and (min-width:1007px) {
+    .reorder,.close{
+        display: none;
+    }
+} */
