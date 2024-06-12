@@ -412,6 +412,10 @@ nav a:hover{
     color: var(--black);
 }
 
+/* .higher-secondary-school, .higher-secondary-school-title, .higher-secondary-school-content {
+    transition: all 0.5s ease;
+} */
+
 /* Contact */
 
 .contact{
@@ -445,7 +449,7 @@ nav a:hover{
 }
 
 .contact-me p{
-    padding: 30px;
+    padding: 20px;
 }
 
 .contact-links{
@@ -461,11 +465,24 @@ nav a:hover{
 /* Responsive */
 @media screen and (max-width:1007px){
     .nav-bar{
-        display: none;
+        background-color: var(--name);
+        position: fixed;
+        top: 80px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        left: -100%;
+        align-items: center;
+        transition: all 0.5s ease;
     }
 
-    .nav{
-        justify-content: space-betweenx;
+    .nav-bar a{
+        margin: 15px;
+    }
+
+    .nav-bar.active 
+    {
+        left: 0;
     }
 
     .home{
@@ -504,7 +521,6 @@ nav a:hover{
         margin-top: 40px;
         background-color: var(--bg);
         border-radius: 120px;
-        /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
         margin: 20px;
     }
 
@@ -518,10 +534,47 @@ nav a:hover{
     .close{
         display: none;
     }
+
+    .intern-title h1, .college-title h1, .higher-secondary-school-title h1, .secondary-school-title h1{
+        font-size: 18px;
+    }
+
+    .intern-title i.fa, .college-title i.fa, .higher-secondary-school-title i.fa, .secondary-school-title i.fa{
+        font-size: 20px;
+    }
+
+    .intern-content li i.fa, .college-content i.fa, .higher-secondary-school-content i.fa, .secondary-school-content i.fa{
+        font-size: 15px;
+    }
+
+    .intern-content ul, .college-content, .higher-secondary-school-content, .secondary-school-content, .college-name p, .higher-secondary-school-name p, .secondary-school-name p{
+        font-size: 15px;
+    }
+
+    .intern-company, .intern-duration, .college-cgpa, .higher-secondary-school-percentage, .secondary-school-percentage{
+        font-size: 15px;
+    }
+
+    .intern-duration i.fa{
+        font-size: 15px;
+    }
+
+    .contact{
+        background-color: var(--bg);
+        width: 300px;
+        height: 260px;
+        border-radius: 20px;
+        margin: auto;
+        font-size: 14px;
+    }
+
+    .contact-me i{
+        font-size: 15px;
+    }
 }
-/*
+
 @media screen and (min-width:1007px) {
-    .reorder,.close{
+    .reorder{
         display: none;
     }
-} */
+}
