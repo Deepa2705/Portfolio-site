@@ -32,13 +32,12 @@ function expand_intern(event){
     <p>Duration : Aug 2023 - Jun 2024</p>`;
 
     var ul=document.createElement("ul");
-    ul.innerHTML=`<li><i class="fa fa-check-square-o"></i>Demonstrated strong collaborative skills by actively participating in the development of UWB-related features, 
-    showcasing effective teamwork and a profound understanding of UWB technology.</li>
-<li><i class="fa fa-check-square-o"></i>Exhibit adaptability and problem-solving abilities through a strong grasp of various applications of UWB technology, such
-        asindoor positioning, asset tracking, and gesture recognition.</li>
-<li><i class="fa fa-check-square-o"></i>Demonstrate extensive expertise in debugging and validating UWB systems utilizing the C programming language.</li>
-<li><i class="fa fa-check-square-o"></i>Possess strong analytical and problem-solving skills to effectively troubleshoot issues and optimize performance in UWB-based
-        systems.</li>`;
+    ul.innerHTML=`<li><i class="fa fa-check-square-o"></i>Contributed to the development of firmware for an Ultra-Wide-Band (UWB) - FIRA 
+    system using C programming. This project broadened my knowledge of UWB technology and firmware development.</li>
+<li><i class="fa fa-check-square-o"></i>Worked with diverse systems utilizing industry-standard protocols including SPI, I2C, and UART, ensuring seamless communication.</li>
+<li><i class="fa fa-check-square-o"></i>Leveraged strong analytical and problem-solving skills to successfully 
+debug and validate complex UWB systems using C programming.</li>
+<li><i class="fa fa-check-square-o"></i>Applied keen diagnostic and troubleshooting abilities to enhance UWB system performance by resolving critical issues and implementing optimizations.</li>`;
 
         content.append(company);
         content.append(duration);
@@ -95,7 +94,7 @@ function expand_college(event){
                                 <i class="fa fa-calendar"></i>
                                 <p>Duration : Jun 2019 - Jul 2024</p>
                                 </div>
-                                <p class="college-cgpa"><span>CGPA : </span>9.01</p>`;
+                                <p class="college-cgpa"><span>CGPA : </span>9.13</p>`;
 
 
     college.append(college_title);
@@ -144,7 +143,7 @@ function expand_second_school(event){
     secondary_school_content.setAttribute("class","secondary-school-content");
     secondary_school_content.innerHTML=`<div class="secondary-school-duration">
                                 <i class="fa fa-calendar"></i>
-                                <p>Duration : Jun 2015 - Mar 2017</p>
+                                <p>Duration : Jun 2016 - Mar 2017</p>
                                 </div>
                                 <p class="secondary-school-percentage"><span>Percentage : </span>97.6%</p>`;
 
@@ -197,7 +196,7 @@ function expand_high_school(event){
     higher_secondary_school_content.setAttribute("class","higher-secondary-school-content");
     higher_secondary_school_content.innerHTML=`<div class="higher-secondary-school-duration">
                 <i class="fa fa-calendar"></i>
-                <p>Duration : Jun 2017 - Mar 2019</p>
+                <p>Duration : Jun 2018 - Mar 2019</p>
             </div>
             <p class="higher-secondary-school-percentage"><span>Percentage : </span>87.83%</p>`;
 
