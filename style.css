@@ -133,7 +133,7 @@ nav a:hover{
     background-color: var(--bg);
     border-radius: 120px;
     /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
-    margin: 20px;
+    margin: 10px;
 }
 
 .home-social img{
@@ -143,6 +143,72 @@ nav a:hover{
 }
 
 /* Experience Page*/
+
+.tcs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--bg);
+    margin: 55px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgb(239, 239, 239,0.1);
+}
+
+.tcs-content li{
+    list-style: none;
+    padding: 10px;
+    color: var(--black);
+}
+
+.tcs-title h1{
+    color: var(--name);
+    padding: 20px;
+    font-size: 30px;
+}
+
+.tcs-content ul{
+    padding: 20px;
+}
+
+.tcs-content li i.fa{
+    padding-right: 8px;
+    color: var(--span);
+    font-size: 20px;
+}
+
+.tcs-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tcs-title i.fa{
+    padding-right: 5px;
+    color: var(--span);
+    font-size: 30px;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.tcs-duration{
+    margin: 0px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.tcs-duration i.fa{
+    font-size: 20px;
+    color: var(--span);
+    padding: 10px;
+}
+
+.tcs-company{
+    font-size: 20px;
+    color: var(--span);
+    padding: 20px 30px;
+    font-weight: bold;
+}
 
 .intern{
     display: flex;
@@ -535,27 +601,27 @@ nav a:hover{
         display: none;
     }
 
-    .intern-title h1, .college-title h1, .higher-secondary-school-title h1, .secondary-school-title h1{
+    .tcs-title h1, .intern-title h1, .college-title h1, .higher-secondary-school-title h1, .secondary-school-title h1{
         font-size: 18px;
     }
 
-    .intern-title i.fa, .college-title i.fa, .higher-secondary-school-title i.fa, .secondary-school-title i.fa{
+    .tcs-title i.fa, .intern-title i.fa, .college-title i.fa, .higher-secondary-school-title i.fa, .secondary-school-title i.fa{
         font-size: 20px;
     }
 
-    .intern-content li i.fa, .college-content i.fa, .higher-secondary-school-content i.fa, .secondary-school-content i.fa{
+    .tcs-content li i.fa, .intern-content li i.fa, .college-content i.fa, .higher-secondary-school-content i.fa, .secondary-school-content i.fa{
         font-size: 15px;
     }
 
-    .intern-content ul, .college-content, .higher-secondary-school-content, .secondary-school-content, .college-name p, .higher-secondary-school-name p, .secondary-school-name p{
+    .tcs-content ul, .intern-content ul, .college-content, .higher-secondary-school-content, .secondary-school-content, .college-name p, .higher-secondary-school-name p, .secondary-school-name p{
         font-size: 15px;
     }
 
-    .intern-company, .intern-duration, .college-cgpa, .higher-secondary-school-percentage, .secondary-school-percentage{
+    .tcs-company, .intern-company, .tcs-duration, .intern-duration, .college-cgpa, .higher-secondary-school-percentage, .secondary-school-percentage{
         font-size: 15px;
     }
 
-    .intern-duration i.fa{
+    .tcs-duration i.fa, .intern-duration i.fa{
         font-size: 15px;
     }
 

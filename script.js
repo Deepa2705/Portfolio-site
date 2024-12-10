@@ -1,6 +1,66 @@
 
 //experience
 
+//tcs
+
+function expand_tcs(event){
+    var tcs_plus=document.getElementById("tcs-plus");
+    var experience_tcs=document.getElementById("experience-tcs");
+
+    var tcs=document.getElementById("tcs");
+
+    var tcs_title_exist=document.getElementById("tcs-title");
+    tcs_title_exist.remove();
+
+    var title=document.createElement("div");
+    title.setAttribute("class","tcs-title");
+    title.setAttribute("id","tcs-title");
+    title.innerHTML=`<h1>Assistant System Engineer</h1>
+    <i class="fa fa-minus" id="tcs-minus" onclick="shrink_tcs(event)"></i>`;
+
+    var content=document.createElement("div");
+    content.setAttribute("class","tcs-content");
+    content.setAttribute("id","tcs-content");
+
+    var company=document.createElement("div");
+    company.setAttribute("class","tcs-company");
+    company.innerHTML=`<p>TATA CONSULTANCY SERVICES, Kochi</p>`;
+
+    var duration=document.createElement("div");
+    duration.setAttribute("class","tcs-duration");
+    duration.innerHTML=`<i class="fa fa-calendar"></i>
+    <p>Duration : Jul 2024 - Present</p>`;
+
+    var ul=document.createElement("ul");
+    ul.innerHTML=``;
+
+        content.append(company);
+        content.append(duration);
+        content.append(ul);
+
+        tcs.append(title);
+        tcs.append(content);
+        experience_tcs.append(tcs);
+}
+
+function shrink_tcs(event){
+    var tcs=document.getElementById("tcs");
+
+    var tcs_title_exist=document.querySelector(".tcs-title");
+    tcs_title_exist.remove();
+
+    var title=document.createElement("div");
+    title.setAttribute("class","tcs-title");
+    title.setAttribute("id","tcs-title");
+    title.innerHTML=`<h1>Assistant System Engineer Trainee</h1>
+    <i class="fa fa-plus" id="tcs-plus" onclick="expand_tcs(event)"></i>`;
+
+    tcs.append(title);
+
+    var tcsSection = document.getElementById("tcs-content");
+    tcsSection.parentNode.removeChild(tcsSection);
+}
+
 //intern
 
 function expand_intern(event){
