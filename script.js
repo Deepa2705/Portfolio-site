@@ -52,7 +52,7 @@ function shrink_tcs(event){
     var title=document.createElement("div");
     title.setAttribute("class","tcs-title");
     title.setAttribute("id","tcs-title");
-    title.innerHTML=`<h1>Assistant System Engineer Trainee</h1>
+    title.innerHTML=`<h1>Assistant System Engineer</h1>
     <i class="fa fa-plus" id="tcs-plus" onclick="expand_tcs(event)"></i>`;
 
     tcs.append(title);
